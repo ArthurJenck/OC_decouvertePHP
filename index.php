@@ -9,8 +9,8 @@
  <h2>Page de test</h2>
  <p>
   Cette page contient du code HTML avec des balises PHP.<br />
-  <?php echo "Ceci est du texte" ?>
-  <?php echo("Ceci est aussi du texte") ?>
+  <?php echo "Ceci est du texte <br>" ?>
+  <?php echo("Ceci est \"aussi\" du <strong>texte</strong>") ?>
 
  <br> 
  Voici quelques petits tests :
@@ -23,6 +23,8 @@
   <li style="color: red;">Texte en rouge</li>
   <li style="color: green;">Texte en vert</li>
  </ul>
+
+ <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s') ?>.</p>
 
 </body>
 
