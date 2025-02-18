@@ -2,7 +2,7 @@
 $users = [
     [
         'full_name' => 'Mickaël Andrieu',
-        'email' => 'mickael.andrieu@exemple.com'
+        'email' => 'mickael.andrieu@exemple.com',
         'age' => 34,
     ],
     [
@@ -12,7 +12,7 @@ $users = [
     ],
     [
         'full_name' => 'Laurène Castor',
-        'email' => 'laurene.castor@exemple.com',
+        'email' => 'lorene.castor@exemple.com',
         'age' => 28,
     ],
 ];
@@ -40,7 +40,7 @@ $recipes = [
         'title' => 'Salade Romaine',
         'recipe' => 'Etape 1 : prenez une belle salade',
         'author' => 'lorene.castor@exemple.com',
-        'is_enablad' => true,
+        'is_enabled' => true,
     ],
 ];
 
@@ -70,9 +70,9 @@ function getRecipes(array $recipes) : array
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <title>Recettes de cuisine : Erreur(</title>
+    <title>Recettes de cuisine :</title>
     <link
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 rel="stylesheet"
