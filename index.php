@@ -12,7 +12,7 @@ $users = [
     ],
     [
         'full_name' => 'Laurène Castor',
-        'email' => 'lorene.castor@exemple.com',
+        'email' => 'laurene.castor@exemple.com',
         'age' => 28,
     ],
 ];
@@ -52,6 +52,7 @@ function displayAuthor(string $authorEmail, array $users): string
                 return $user['full_name'] . '(' . $user['age'] . ' ans)';
             }
         }
+        return "Utilisateur inconnu";
     }
 function isValidRecipe(array $recipe): bool
     {
