@@ -1,5 +1,4 @@
 <!-- inclusion des variables et fonctions -->
-
 <?php
 session_start();
 require_once(__DIR__ . '/utils/variables.php');
@@ -24,7 +23,7 @@ require_once(__DIR__ . '/utils/functions.php');
         <h1>Site de recettes</h1>
 
         <!-- Formulaire de connexion -->
-        <?php require_once(__DIR__ . '/login.php'); ?>
+        <?php require_once(__DIR__ . '/login/login.php'); ?>
 
         <?php foreach (getRecipes($recipes) as $recipe) : ?>
             <article>
