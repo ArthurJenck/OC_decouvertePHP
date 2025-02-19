@@ -13,10 +13,13 @@
 <?php
 $getData = $_GET;
 
-if (!isset($getData['email']) || !isset($getData['message']))
-{
-    echo('Il faut un email et un message pour soumettre le formulaire.');
-    // Arrête l'exécution de ce fichier par PHP
+if (
+    !isset($getData['email'])
+    || !filter_var($getData['email'], FILTER_VALIDATE_EMAIL)
+    || empty($getData['message'])
+    || trim($getData['message']) === ''
+) {
+    echo('Il faut un email et un message valides pour soumettre le formulaire.');
     return;
 }
 ?>
