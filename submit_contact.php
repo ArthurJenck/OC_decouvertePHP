@@ -34,7 +34,7 @@ if (
      <div class="card-body">
          <h5 class="card-title">Rappel de vos informations</h5>
          <p class="card-text"><b>Email</b> : <?php echo $getData['email']; ?></p>
-         <p class="card-text"><b>Message</b> : <?php echo $getData['message']; ?></p>
+         <p class="card-text"><b>Message</b> : <?php echo htmlspecialchars($getData['message']); ?></p>
      </div>
  </div>
  
