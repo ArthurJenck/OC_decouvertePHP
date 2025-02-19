@@ -28,9 +28,6 @@ require_once(__DIR__ . '/functions.php');
             </article>
         <?php endforeach ?>
 
-        <br>
-        <a href="bonjour.php?nom=Dupont&amp;prenom=Jean">Dis-moi bonjour !</a>
-        
     </div>
     <!-- inclusion du bas de page du site -->
     <?php require_once(__DIR__ . '/footer.php'); ?>
