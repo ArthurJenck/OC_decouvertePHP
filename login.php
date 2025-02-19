@@ -1,11 +1,5 @@
 <?php
 $postData = $_POST;
-$users = [
-  [
-    "email" => "johndoe@gmail.com",
-    "password" => "azertyuiop"
-  ]
-];
 
 if (isset($postData["email"]) && isset($postData["password"])) {
   if (!filter_var($postData["email"], FILTER_VALIDATE_EMAIL)) {
@@ -23,8 +17,6 @@ if (isset($postData["email"]) && isset($postData["password"])) {
   }
 }
 ?>
-
-
 
 <?php
 if (!isset($loggedUser)) : ?>
