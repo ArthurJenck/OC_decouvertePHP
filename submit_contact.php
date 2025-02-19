@@ -11,7 +11,7 @@
 </head>
 
 <?php
-$getData = $_GET;
+$getData = $_POST;
 
 if (
     !isset($getData['email'])
@@ -33,8 +33,8 @@ if (
      
      <div class="card-body">
          <h5 class="card-title">Rappel de vos informations</h5>
-         <p class="card-text"><b>Email</b> : <?php echo $_GET['email']; ?></p>
-         <p class="card-text"><b>Message</b> : <?php echo $_GET['message']; ?></p>
+         <p class="card-text"><b>Email</b> : <?php echo $getData['email']; ?></p>
+         <p class="card-text"><b>Message</b> : <?php echo $getData['message']; ?></p>
      </div>
  </div>
  
