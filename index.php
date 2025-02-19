@@ -1,7 +1,7 @@
 <!-- inclusion des variables et fonctions -->
 <?php
-require_once(__DIR__ . '/variables.php');
-require_once(__DIR__ . '/functions.php');
+require_once(__DIR__ . '/utils/variables.php');
+require_once(__DIR__ . '/utils/functions.php');
 ?>
 
 <!DOCTYPE html>
