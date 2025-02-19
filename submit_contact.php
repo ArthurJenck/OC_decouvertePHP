@@ -10,6 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
+<?php
+$getData = $_GET;
+
+if (!isset($getData['email']) || !isset($getData['message']))
+{
+    echo('Il faut un email et un message pour soumettre le formulaire.');
+    // Arrête l'exécution de ce fichier par PHP
+    return;
+}
+?>
 
 <body class="d-flex flex-column min-vh-100">
 <div class="container">
