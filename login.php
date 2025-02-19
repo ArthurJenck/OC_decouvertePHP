@@ -16,6 +16,12 @@ require_once(__DIR__ . '/functions.php');
 
 <?php
 $postData = $_POST;
+$users = [
+  [
+    "email" => "johndoe@gmail.com",
+    "password" => "azertyuiop"
+  ]
+];
 
 if (isset($postData["email"]) && isset($postData["password"])) {
   if (!filter_var($postData["email"], FILTER_VALIDATE_EMAIL)) {
