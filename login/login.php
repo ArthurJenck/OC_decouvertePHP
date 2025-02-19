@@ -31,5 +31,6 @@
 <?php else : ?>
   <div class="alert alert-success" role="alert">
     Bonjour <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
+    <a href="/tests/login/logout.php">Déconnexion</a>
   </div>
 <?php endif; ?>
