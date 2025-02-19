@@ -7,9 +7,7 @@ if (isset($postData["email"]) && isset($postData["password"])) {
   } else {
     foreach ($users as $user) {
       if ($user["email"] === $postData["email"] && $user["password"] === $postData["password"]) {
-        $loggedUser = [
-          "email" => $user["email"]
-        ];
+        $_SESSION["LOGGED_USER"] = $user["email"];
       } else {
         $errorMessage = sprintf("Identifiants incorrects", $postData["email"], strip_tags($postData["password"]));
       }
@@ -19,7 +17,7 @@ if (isset($postData["email"]) && isset($postData["password"])) {
 ?>
 
 <?php
-if (!isset($loggedUser)) : ?>
+if (!isset($_SESSION["LOGGED_USER"])) : ?>
   <form action="index.php" method="POST">
     <?php if (isset($errorMessage)) : ?>
       <div class="alert alert-danger">
@@ -41,6 +39,6 @@ if (!isset($loggedUser)) : ?>
 <?php else : ?>
 
   <p class="alert alert-success" role="alert">
-    Bonjour <?php $loggedUser["email"] ?> et bienvenue sur le site !
+    Bonjour <?php echo $_SESSION["LOGGED_USER"] ?> et bienvenue sur le site !
   </p>
 <?php endif ?>
