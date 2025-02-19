@@ -49,6 +49,7 @@ if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] === 0) {
     }
     // On peut valider le fichier et le stocker définitivement
     move_uploaded_file($_FILES['screenshot']['tmp_name'], $path . basename($_FILES['screenshot']['name']));
+    $fileUploaded = true;
 } else {
     echo "Problème quelque part";
     return;
@@ -66,6 +67,7 @@ if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] === 0) {
          <h5 class="card-title">Rappel de vos informations</h5>
          <p class="card-text"><b>Email</b> : <?php echo $getData['email']; ?></p>
          <p class="card-text"><b>Message</b> : <?php echo htmlspecialchars($getData['message']); ?></p>
+         <p class="card-text"><b>Fichier</b> : <?php echo $fileUploaded ? "L'envoi a bien été effectué !" : "Erreur lors de l'envoi du fichier..." ?></p>
      </div>
  </div>
  
