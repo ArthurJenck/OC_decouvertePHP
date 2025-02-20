@@ -3,7 +3,7 @@
 -->
 
 <?php if (!isset($_SESSION['LOGGED_USER'])) : ?>
-  <form action="/tests/login/submit_login.php" method="POST">
+  <form action="/tests/Cours/login/submit_login.php" method="POST">
 
     <!-- si message d'erreur on l'affiche -->
     <?php if (isset($_SESSION['LOGIN_ERROR_MESSAGE'])) : ?>
@@ -31,6 +31,6 @@
 <?php else : ?>
   <div class="alert alert-success" role="alert">
     Bonjour <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
-    <a href="/tests/login/logout.php">Déconnexion</a>
+    <a href="/tests/Cours/login/logout.php">Déconnexion</a>
   </div>
 <?php endif; ?>
