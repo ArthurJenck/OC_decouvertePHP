@@ -9,7 +9,7 @@ try {
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table recipes
-$sqlQuery = 'SELECT * FROM recipes';
+$sqlQuery = 'SELECT * FROM recipes WHERE author = "mickael.andrieu@exemple.com"';
 
 $recipesStatement = $mysqlClient->prepare($sqlQuery);
 $recipesStatement->execute();
