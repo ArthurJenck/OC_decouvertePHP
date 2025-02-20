@@ -9,10 +9,12 @@ try {
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table recipes
-$sqlQuery = 'SELECT * FROM recipes WHERE author = ?';
+$sqlQuery = 'SELECT * FROM recipes WHERE author = :author';
 
 $recipesStatement = $mysqlClient->prepare($sqlQuery);
-$recipesStatement->execute([$_GET["author"]]);
+$recipesStatement->execute([
+ "author" => $_GET["author"]
+]);
 $recipes = $recipesStatement->fetchAll();
 
 // On affiche chaque recette une à une
