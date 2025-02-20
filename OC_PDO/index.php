@@ -9,11 +9,12 @@ try {
 // Si tout va bien, on peut continuer
 
 // On récupère tout le contenu de la table recipes
-$sqlQuery = 'SELECT * FROM recipes WHERE author = :author';
+$sqlQuery = 'SELECT * FROM recipes WHERE author = :author AND is_enabled = :is_enabled';
 
 $recipesStatement = $mysqlClient->prepare($sqlQuery);
 $recipesStatement->execute([
- "author" => $_GET["author"]
+ "author" => $_GET["author"],
+ "is_enabled" => 0
 ]);
 $recipes = $recipesStatement->fetchAll();
 
